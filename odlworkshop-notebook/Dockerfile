@@ -68,6 +68,7 @@ RUN conda install nomkl numpy scipy matplotlib pytest -y && \
     fix-permissions $CONDA_DIR
 
 RUN pip --no-cache-dir install https://github.com/odlgroup/odl/archive/master.zip && \
+    pip --no-cache-dir install https://github.com/adler-j/adler/archive/master.zip && \
     pip --no-cache-dir install https://raw.githubusercontent.com/lakshayg/tensorflow-build/master/tensorflow-1.4.0rc1-cp36-cp36m-linux_x86_64.whl && \
 python -m ipykernel.kernelspec
 
